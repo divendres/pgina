@@ -34,6 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationUI));
             this.m_tabs = new System.Windows.Forms.TabControl();
             this.m_generalConfigTab = new System.Windows.Forms.TabPage();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.lpPasswordTB = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lpUsernameTB = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.tbLogonProgressMessage = new System.Windows.Forms.TextBox();
@@ -159,6 +164,7 @@
             this.btnSaveAndClose = new System.Windows.Forms.Button();
             this.m_tabs.SuspendLayout();
             this.m_generalConfigTab.SuspendLayout();
+            this.groupBox21.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -217,12 +223,13 @@
             this.m_tabs.Location = new System.Drawing.Point(12, 12);
             this.m_tabs.Name = "m_tabs";
             this.m_tabs.SelectedIndex = 0;
-            this.m_tabs.Size = new System.Drawing.Size(798, 573);
+            this.m_tabs.Size = new System.Drawing.Size(827, 573);
             this.m_tabs.TabIndex = 0;
             this.m_tabs.Selected += new System.Windows.Forms.TabControlEventHandler(this.m_tabs_Selected);
             // 
             // m_generalConfigTab
             // 
+            this.m_generalConfigTab.Controls.Add(this.groupBox21);
             this.m_generalConfigTab.Controls.Add(this.groupBox17);
             this.m_generalConfigTab.Controls.Add(this.groupBox4);
             this.m_generalConfigTab.Controls.Add(this.groupBox14);
@@ -232,10 +239,55 @@
             this.m_generalConfigTab.Location = new System.Drawing.Point(4, 22);
             this.m_generalConfigTab.Name = "m_generalConfigTab";
             this.m_generalConfigTab.Padding = new System.Windows.Forms.Padding(3);
-            this.m_generalConfigTab.Size = new System.Drawing.Size(790, 547);
+            this.m_generalConfigTab.Size = new System.Drawing.Size(819, 547);
             this.m_generalConfigTab.TabIndex = 1;
             this.m_generalConfigTab.Text = "General";
             this.m_generalConfigTab.UseVisualStyleBackColor = true;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.lpPasswordTB);
+            this.groupBox21.Controls.Add(this.label22);
+            this.groupBox21.Controls.Add(this.lpUsernameTB);
+            this.groupBox21.Controls.Add(this.label23);
+            this.groupBox21.Location = new System.Drawing.Point(566, 299);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(229, 106);
+            this.groupBox21.TabIndex = 7;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Login Placeholder";
+            // 
+            // lpPasswordTB
+            // 
+            this.lpPasswordTB.Location = new System.Drawing.Point(80, 62);
+            this.lpPasswordTB.Name = "lpPasswordTB";
+            this.lpPasswordTB.Size = new System.Drawing.Size(124, 20);
+            this.lpPasswordTB.TabIndex = 3;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 65);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(56, 13);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Password:";
+            // 
+            // lpUsernameTB
+            // 
+            this.lpUsernameTB.Location = new System.Drawing.Point(80, 30);
+            this.lpUsernameTB.Name = "lpUsernameTB";
+            this.lpUsernameTB.Size = new System.Drawing.Size(124, 20);
+            this.lpUsernameTB.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(13, 33);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Username:";
             // 
             // groupBox17
             // 
@@ -246,7 +298,7 @@
             this.groupBox17.Controls.Add(this.label19);
             this.groupBox17.Location = new System.Drawing.Point(17, 464);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(749, 68);
+            this.groupBox17.Size = new System.Drawing.Size(778, 68);
             this.groupBox17.TabIndex = 6;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Logon Progress";
@@ -267,7 +319,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLogonProgressMessage.Location = new System.Drawing.Point(142, 19);
             this.tbLogonProgressMessage.Name = "tbLogonProgressMessage";
-            this.tbLogonProgressMessage.Size = new System.Drawing.Size(579, 20);
+            this.tbLogonProgressMessage.Size = new System.Drawing.Size(608, 20);
             this.tbLogonProgressMessage.TabIndex = 1;
             // 
             // label19
@@ -284,7 +336,7 @@
             this.groupBox4.Controls.Add(this.chk_originalUsernameUnlock);
             this.groupBox4.Location = new System.Drawing.Point(17, 411);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(543, 47);
+            this.groupBox4.Size = new System.Drawing.Size(778, 47);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Unlock";
@@ -438,7 +490,7 @@
             this.motdGB.Controls.Add(this.motdLabel);
             this.motdGB.Location = new System.Drawing.Point(17, 182);
             this.motdGB.Name = "motdGB";
-            this.motdGB.Size = new System.Drawing.Size(749, 108);
+            this.motdGB.Size = new System.Drawing.Size(778, 108);
             this.motdGB.TabIndex = 1;
             this.motdGB.TabStop = false;
             this.motdGB.Text = "MOTD";
@@ -461,7 +513,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.motdTB.Location = new System.Drawing.Point(53, 24);
             this.motdTB.Name = "motdTB";
-            this.motdTB.Size = new System.Drawing.Size(667, 20);
+            this.motdTB.Size = new System.Drawing.Size(696, 20);
             this.motdTB.TabIndex = 1;
             // 
             // motdLabel
@@ -484,7 +536,7 @@
             this.groupBox12.Controls.Add(this.label10);
             this.groupBox12.Location = new System.Drawing.Point(17, 16);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(749, 160);
+            this.groupBox12.Size = new System.Drawing.Size(778, 160);
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Tile Image";
@@ -492,7 +544,7 @@
             // btnImageBrowse
             // 
             this.btnImageBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImageBrowse.Location = new System.Drawing.Point(458, 72);
+            this.btnImageBrowse.Location = new System.Drawing.Point(487, 72);
             this.btnImageBrowse.Name = "btnImageBrowse";
             this.btnImageBrowse.Size = new System.Drawing.Size(33, 23);
             this.btnImageBrowse.TabIndex = 4;
@@ -504,7 +556,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(537, 74);
+            this.label11.Location = new System.Drawing.Point(566, 74);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 13);
             this.label11.TabIndex = 3;
@@ -514,7 +566,7 @@
             // 
             this.m_tileImagePreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.m_tileImagePreview.Image = global::pGina.Configuration.Properties.Resources.pginalogo_monochrome_126x126;
-            this.m_tileImagePreview.Location = new System.Drawing.Point(591, 17);
+            this.m_tileImagePreview.Location = new System.Drawing.Point(620, 17);
             this.m_tileImagePreview.Name = "m_tileImagePreview";
             this.m_tileImagePreview.Size = new System.Drawing.Size(130, 130);
             this.m_tileImagePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -527,7 +579,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.m_tileImageTxt.Location = new System.Drawing.Point(95, 74);
             this.m_tileImageTxt.Name = "m_tileImageTxt";
-            this.m_tileImageTxt.Size = new System.Drawing.Size(357, 20);
+            this.m_tileImageTxt.Size = new System.Drawing.Size(386, 20);
             this.m_tileImageTxt.TabIndex = 1;
             // 
             // label10
@@ -546,7 +598,7 @@
             this.m_pluginConfigTab.Location = new System.Drawing.Point(4, 22);
             this.m_pluginConfigTab.Name = "m_pluginConfigTab";
             this.m_pluginConfigTab.Padding = new System.Windows.Forms.Padding(3);
-            this.m_pluginConfigTab.Size = new System.Drawing.Size(790, 547);
+            this.m_pluginConfigTab.Size = new System.Drawing.Size(819, 547);
             this.m_pluginConfigTab.TabIndex = 0;
             this.m_pluginConfigTab.Text = "Plugin Selection";
             this.m_pluginConfigTab.UseVisualStyleBackColor = true;
@@ -667,7 +719,7 @@
             this.m_pluginOrderTab.Controls.Add(this.tableLayoutPanel1);
             this.m_pluginOrderTab.Location = new System.Drawing.Point(4, 22);
             this.m_pluginOrderTab.Name = "m_pluginOrderTab";
-            this.m_pluginOrderTab.Size = new System.Drawing.Size(790, 547);
+            this.m_pluginOrderTab.Size = new System.Drawing.Size(819, 547);
             this.m_pluginOrderTab.TabIndex = 3;
             this.m_pluginOrderTab.Text = "Plugin Order";
             this.m_pluginOrderTab.UseVisualStyleBackColor = true;
@@ -946,7 +998,7 @@
             this.m_simTab.Location = new System.Drawing.Point(4, 22);
             this.m_simTab.Name = "m_simTab";
             this.m_simTab.Padding = new System.Windows.Forms.Padding(3);
-            this.m_simTab.Size = new System.Drawing.Size(790, 547);
+            this.m_simTab.Size = new System.Drawing.Size(819, 547);
             this.m_simTab.TabIndex = 2;
             this.m_simTab.Text = "Simulation";
             this.m_simTab.UseVisualStyleBackColor = true;
@@ -1334,7 +1386,7 @@
             this.ginaOptions.Location = new System.Drawing.Point(4, 22);
             this.ginaOptions.Name = "ginaOptions";
             this.ginaOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.ginaOptions.Size = new System.Drawing.Size(790, 547);
+            this.ginaOptions.Size = new System.Drawing.Size(819, 547);
             this.ginaOptions.TabIndex = 4;
             this.ginaOptions.Text = "GINA Options";
             this.ginaOptions.UseVisualStyleBackColor = true;
@@ -1454,7 +1506,7 @@
             this.cpOptions.Location = new System.Drawing.Point(4, 22);
             this.cpOptions.Name = "cpOptions";
             this.cpOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.cpOptions.Size = new System.Drawing.Size(790, 547);
+            this.cpOptions.Size = new System.Drawing.Size(819, 547);
             this.cpOptions.TabIndex = 5;
             this.cpOptions.Text = "Credential Provider Options";
             this.cpOptions.UseVisualStyleBackColor = true;
@@ -1587,7 +1639,7 @@
             // btnApply
             // 
             this.btnApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApply.Location = new System.Drawing.Point(650, 602);
+            this.btnApply.Location = new System.Drawing.Point(679, 602);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 4;
@@ -1598,7 +1650,7 @@
             // btnOkay
             // 
             this.btnOkay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOkay.Location = new System.Drawing.Point(731, 602);
+            this.btnOkay.Location = new System.Drawing.Point(760, 602);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(75, 23);
             this.btnOkay.TabIndex = 3;
@@ -1619,7 +1671,7 @@
             // btnSaveAndClose
             // 
             this.btnSaveAndClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveAndClose.Location = new System.Drawing.Point(549, 602);
+            this.btnSaveAndClose.Location = new System.Drawing.Point(578, 602);
             this.btnSaveAndClose.Name = "btnSaveAndClose";
             this.btnSaveAndClose.Size = new System.Drawing.Size(91, 23);
             this.btnSaveAndClose.TabIndex = 6;
@@ -1632,7 +1684,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 637);
+            this.ClientSize = new System.Drawing.Size(851, 637);
             this.Controls.Add(this.btnSaveAndClose);
             this.Controls.Add(this.m_pginaVersionLbl);
             this.Controls.Add(this.btnApply);
@@ -1643,6 +1695,8 @@
             this.Text = "pGina Configuration";
             this.m_tabs.ResumeLayout(false);
             this.m_generalConfigTab.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1833,5 +1887,10 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckBox m_hidePasswordFieldCb;
         private System.Windows.Forms.CheckBox m_hideUsernameFieldCb;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.TextBox lpPasswordTB;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox lpUsernameTB;
+        private System.Windows.Forms.Label label23;
     }
 }

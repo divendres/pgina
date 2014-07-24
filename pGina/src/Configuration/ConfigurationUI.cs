@@ -256,6 +256,10 @@ namespace pGina.Configuration
             // Service status checkbox
             this.logonUiShowServiceStatusCB.Checked = Settings.Get.ShowServiceStatusInLogonUi;
 
+            // Load Login Placeholders
+            this.lpUsernameTB.Text = Settings.Get.GetSetting("UsernamePH", "Username");
+            this.lpPasswordTB.Text = Settings.Get.GetSetting("PasswordPH", "Password");
+
             // Make sure that the pGina service is installed
             foreach( ServiceController ctrl in ServiceController.GetServices() )
             {
@@ -885,6 +889,10 @@ namespace pGina.Configuration
 
             // Service status checkbox
             Settings.Get.ShowServiceStatusInLogonUi = this.logonUiShowServiceStatusCB.Checked;
+
+            // Login Placeholders
+            Settings.Get.UsernamePH = this.lpUsernameTB.Text.Trim();
+            Settings.Get.PasswordPH = this.lpPasswordTB.Text.Trim();
 
             // Save unlock setting
             Settings.Get.UseOriginalUsernameInUnlockScenario = chk_originalUsernameUnlock.Checked;
