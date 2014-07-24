@@ -60,6 +60,8 @@ namespace pGina.Core
             s_settings.SetDefault("EnableSpecialActionButton", false);
             s_settings.SetDefault("SpecialAction", "Shutdown");
             s_settings.SetDefault("ShowServiceStatusInLogonUi", true);
+            s_settings.SetDefault("UsernamePH", "Username");
+            s_settings.SetDefault("PasswordPH", "Password");
 
             s_settings.SetDefault("CredentialProviderFilters", new string[] { });
             s_settings.SetDefault("CredentialProviderDefaultTile", true);
