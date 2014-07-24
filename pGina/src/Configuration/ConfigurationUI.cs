@@ -257,8 +257,8 @@ namespace pGina.Configuration
             this.logonUiShowServiceStatusCB.Checked = Settings.Get.ShowServiceStatusInLogonUi;
 
             // Load Login Placeholders
-            this.lpUsernameTB.Text = Settings.Get.GetSetting("UsernamePH", "Username");
-            this.lpPasswordTB.Text = Settings.Get.GetSetting("PasswordPH", "Password");
+            this.lpUsernameTB.Text = Settings.Get.GetSetting("UsernamePH");
+            this.lpPasswordTB.Text = Settings.Get.GetSetting("PasswordPH");
 
             // Make sure that the pGina service is installed
             foreach( ServiceController ctrl in ServiceController.GetServices() )
